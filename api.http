@@ -1,0 +1,59 @@
+### Signup
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+  "name": "Siddu",
+  "email": "siddu@example.com",
+  "password": "123456",
+  "country": "USA"
+}
+
+###
+
+### Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "vinay@example.com",
+  "password": "123456"
+}
+
+###
+
+### Create Task (replace USER_ID after login)
+POST http://localhost:5000/tasks
+Content-Type: application/json
+
+{
+  "user_id":7,
+  "project_name": "Weather App",
+  "title": "Testing Part ",
+  "description": "technologies used : Automation Testing ",
+  "status": "completed",
+  "completed_at": "2025-04-27"
+}
+
+###
+
+### Get All Tasks (replace USER_ID)
+GET http://localhost:5000/tasks/7
+
+###
+
+### Update Task (replace TASK_ID)
+PUT http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Updated Task Title",
+  "description": "Updated description",
+  "status": "completed",
+  "completed_at": "2025-04-29"
+}
+
+###
+
+### Delete Task (replace TASK_ID)
+DELETE http://localhost:5000/tasks/15
